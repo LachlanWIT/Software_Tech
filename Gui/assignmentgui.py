@@ -3,7 +3,6 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import *
-import tkcalendar
 from datetime import timedelta
 
 
@@ -52,12 +51,12 @@ picture_file = PhotoImage(
 worthAThousandWords.create_image(48, 0, anchor=NE, image=picture_file)
 worthAThousandWords.place(x=375, y=50)
 
-date1 = tkcalendar.DateEntry(window)
-date1.place(x=550, y=50)
+#date1 = tkcalendar.DateEntry(window)
+#date1.place(x=550, y=50)
 
-date2 = tkcalendar.DateEntry(window)
-date2.place(x=650, y=50)
+#date2 = tkcalendar.DateEntry(window)
+#date2.place(x=650, y=50)
 
-Button(window, text='Find range', command=lambda: date_range(date1.get_date(), date2.get_date())).pack()
+#Button(window, text='Find range', command=lambda: date_range(date1.get_date(), date2.get_date())).pack()
 
 window.mainloop()
