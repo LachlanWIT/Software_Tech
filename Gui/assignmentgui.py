@@ -31,7 +31,7 @@ window = Tk()
 # This is the section of code which creates the main window
 window.geometry('800x800')
 window.configure(background='#808080')
-window.title("Analysis Tool")
+window.title("NSW Traffic Data Analysis Tool")
 
 # This is the section of code which creates a button
 button = tk.Button(window, text='Close', width=25, bg='#C1CDCD', font=('arial', 12, 'normal'),

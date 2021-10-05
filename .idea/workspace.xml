@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60c3aa63-ba0b-46f4-b16f-787311a1bf6c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Software_Tech.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Software_Tech.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignmentgui.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/open file.py" beforeDir="false" afterPath="$PROJECT_DIR$/open file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gui/assignmentgui.py" beforeDir="false" afterPath="$PROJECT_DIR$/Gui/assignmentgui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,9 +106,5 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/assignmentgui_py$assignmentgui__1_.coverage" NAME="assignmentgui (1) Coverage Results" MODIFIED="1633417876408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Gui" />
-    <SUITE FILE_PATH="coverage/assignmentgui_py$assignmentgui.coverage" NAME="assignmentgui Coverage Results" MODIFIED="1633416652996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
