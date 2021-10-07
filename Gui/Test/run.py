@@ -1,6 +1,8 @@
 import wx
 import wx.grid
-
+import pandas as pd
+import csv
+from datetime import datetime
 
 
 class gui (wx.Frame) :
@@ -81,8 +83,33 @@ class gui (wx.Frame) :
     def searchagain(self,event):
         self.Refresh()
 
+        
+#lachlan test function 1
+#import data
+data = pd.read_csv('penalty_data_set_2.csv', low_memory=False)
+
+#assign variable name for if statement from global button variable in GUI
+startdate = search_startperiod
+enddate = search_endperiod 
 
 
+#print to console all cases based on camera or radar
+
+camera = (data[data.stack().str.contains("Camera Detected").any(level=0)])
+radar = (data[data.stack().str.contains("Radar").any(level=0)])
+
+#apply date range filter
+
+for row in camera:
+    if camera["OFFENCE_MONTH"] >= startdate and camera["OFFENCE_MONTH"]<= enddate:
+        print(row)
+
+for row in radar:
+    if radar["OFFENCE_MONTH"] >= startdate and radar["OFFENCE_MONTH"]<= enddate:
+        print(row)
+
+#need statement to trigger this if user selects correct button option - will work with jack at uni
+        
 
 
 

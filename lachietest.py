@@ -12,8 +12,10 @@ data = pd.read_csv('penalty_data_set_2.csv', low_memory=False)
 #For a user-selected period, 
 #retrieve all cases captured by radar or camera based on offence 
 
-startdate = 
-enddate = 
+
+#assign variable name for if statement from global button variable in GUI
+startdate = search_startperiod
+enddate = search_endperiod 
 
 
 #print to console all cases based on camera or radar
