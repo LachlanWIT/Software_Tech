@@ -6,7 +6,7 @@ def startFile():
 	    try:
                 dataSetFile = "https://www.kaggle.com/llihan/australia-nsw-traffic-penalty-data-20112017"
                 urllib.request.urlretrieve(dataSetFile, "dataset.xls")
-            if fail:
+               if fail:
                 try: 
                     print("Online copy not acquired please enter filepathway for local copy.")
                     dataSetFile = open(input("please enter file pathway: " ))
