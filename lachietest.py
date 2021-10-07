@@ -4,7 +4,7 @@ import csv
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from datetime import date
+from datetime import datetime
 
 #import data
 data = pd.read_csv('penalty_data_set_2.csv', low_memory=False)
@@ -12,9 +12,10 @@ data = pd.read_csv('penalty_data_set_2.csv', low_memory=False)
 #For a user-selected period, 
 #retrieve all cases captured by radar or camera based on offence 
 
-#static dates - jack to change to be based on gui input
-startdate = date(day=1, month=7, year=2012)
-enddate = date(day=1, month=7, year=2017)
+startdate = 
+enddate = 
+
+
 #print to console all cases based on camera or radar
 
 camera = (data[data.stack().str.contains("Camera Detected").any(level=0)])
@@ -25,3 +26,5 @@ radar = (data[data.stack().str.contains("Radar").any(level=0)])
 for row in camera:
     if camera["OFFENCE_MONTH"] >= startdate and camera["OFFENCE_MONTH"]<= enddate:
         print(row)
+        
+        
