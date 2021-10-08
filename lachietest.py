@@ -1,10 +1,7 @@
 #Test scenarios for functionaln requirements - pending for jack to add to GUI
 
-import csv
-import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
-from datetime import datetime
+from datetime import date
 
 #import data
 data = pd.read_csv('penalty_data_set_2.csv', low_memory=False)
@@ -14,19 +11,18 @@ data = pd.read_csv('penalty_data_set_2.csv', low_memory=False)
 
 
 #assign variable name for if statement from global button variable in GUI
-startdate = search_startperiod
-enddate = search_endperiod 
+start_date = date(2014, 1, 1)
+end_date = date(2016, 1, 1)
 
 
-#print to console all cases based on camera or radar
+def function_1(start_date, end_date):
+    camera = (data[data.stack().str.contains("Camera Detected").any(level=0)])
+    radar = (data[data.stack().str.contains("Radar").any(level=0)])
+    for row in camera:
+        if camera["OFFENCE_MONTH"] >= start_date and camera["OFFENCE_MONTH"] <= end_date:
+            print(row)
+    for row in radar:
+            if radar["OFFENCE_MONTH"] >= start_date and radar["OFFENCE_MONTH"] <= end_date:
+             print(row)
 
-camera = (data[data.stack().str.contains("Camera Detected").any(level=0)])
-radar = (data[data.stack().str.contains("Radar").any(level=0)])
-
-#apply date range filter
-
-for row in camera:
-    if camera["OFFENCE_MONTH"] >= startdate and camera["OFFENCE_MONTH"]<= enddate:
-        print(row)
-        
         
