@@ -8,21 +8,11 @@ Created on Thu Oct  7 13:43:32 2021
 #Meesum requirement !
 
 # importing the module
-import csv
+import pandas as pd
 
-def searchByDate():
-    year = str(input('Enter year to show data: '))
-    csv_file=csv.reader(open('penalty_data_set_2.csv', 'r'))
+data = pd.read_csv('penalty_data_set_2.csv', low_memory=False)
 
-    for row in csv_file:
-        if year in row[0]:
-            print(row)
-
-print('Enter 0 to search for year')
-
-src = int(input('Input: '))
-
-if src==0:
-    searchByDate()
-else:
-    print('sorry invalid year')
+def searchByDate(start_date, end_date):
+   for row in data:
+       if data['OFFENCE_MONTH'] >= start_date and data["OFFENCE_MONTH"] <= end_date:
+           print(row)
