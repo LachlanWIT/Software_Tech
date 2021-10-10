@@ -3,11 +3,11 @@ import wx.grid
 import pandas as pd
 import unittest
 from matplotlib import pyplot as plt
+from matplotlib.dates import MonthLocator, DateFormatter
 import datetime
 from numpy.core.defchararray import lower
-import pandas as pd
-from matplotlib.dates import MonthLocator, DateFormatter
-import matplotlib.pyplot as plt
+
+
 
 data = pd.read_csv('penalty_data_set_2.csv', low_memory=False)
 
