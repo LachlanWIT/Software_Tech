@@ -9,7 +9,6 @@ import pandas as pd
 from matplotlib.dates import MonthLocator, DateFormatter
 import matplotlib.pyplot as plt
 
-
 data = pd.read_csv('penalty_data_set_2.csv', low_memory=False)
 
 
@@ -83,10 +82,10 @@ class gui(wx.Frame):
     # date range
 
     def keywordSearch(self, event):
-        #this doesnt display as gui integration was unsuccessful.
-            for row in data:
-                if data['OFFENCE_MONTH'] >=  self.begin and data["OFFENCE_MONTH"] <= self.stop :
-                    print(row)
+        # this doesnt display as gui integration was unsuccessful.
+        for row in data:
+            if data['OFFENCE_MONTH'] >= self.begin and data["OFFENCE_MONTH"] <= self.stop:
+                print(row)
 
     def comit(self, event):
         cb1 = self.cb1.GetValue()
@@ -97,13 +96,12 @@ class gui(wx.Frame):
         self.stop = self.end.GetValue()
         print(self.stop, self.begin)
 
-
         if cb1 == True and cb2 == True:
             for row in camera:
-                if  self.begin <= camera["OFFENCE_MONTH"] <= self.stop:
+                if self.begin <= camera["OFFENCE_MONTH"] <= self.stop:
                     print(row)
             for row in radar:
-                if  self.begin <= radar["OFFENCE_MONTH"] <= self.stop:
+                if self.begin <= radar["OFFENCE_MONTH"] <= self.stop:
                     print(row)
         elif cb1 == False and cb2 == True:
             for row in radar:
@@ -118,26 +116,27 @@ class gui(wx.Frame):
             print("Please try again")
 
     def DistributionBttn(self, event):
-         # This function did not run within the gui it can be seen running in file named meesum.py
+        # This function did not run within the gui it can be seen running in file named meesum.py
         print()
-   #     pd.set_option('max_column', 100)
-   #     pd.set_option('max_row', 250)
-   #     pd.set_option('display.float_format', lambda x: '%.3f' % x)
-#
-   #     df = pd.read_csv(
-   #         'penalty_data_set_2.csv',
-   #         parse_dates=['OFFENCE_MONTH'], date_parser=lambda x: pd.datetime.strptime(x, '%d/%m/%Y'))
-#
-   #     fig, ax = plt.subplots(1, figsize=(22, 6), )
-   #     monthly_fine_dist = df.groupby('OFFENCE_MONTH').agg({'TOTAL_VALUE': 'count', }).reset_index()
-   #     plt.plot('OFFENCE_MONTH', 'TOTAL_VALUE', data=monthly_fine_dist, linewidth=10)
-   #     months = MonthLocator(range(1, 13), bymonthday=1, interval=3)
-   #     monthsFmt = DateFormatter("%b '%y")
-   #     ax.xaxis.set_major_locator(months)
-   #     ax.xaxis.setmajorformatter(monthsFmt)
-   #         = plt.xticks(rotation=45)
-   #         = plt.tickparams(axis='both', which='major', labelsize=10)
-   #         = plt.title('Monthly Number Cases', size=21)
+
+    #     pd.set_option('max_column', 100)
+    #     pd.set_option('max_row', 250)
+    #     pd.set_option('display.float_format', lambda x: '%.3f' % x)
+    #
+    #     df = pd.read_csv(
+    #         'penalty_data_set_2.csv',
+    #         parse_dates=['OFFENCE_MONTH'], date_parser=lambda x: pd.datetime.strptime(x, '%d/%m/%Y'))
+    #
+    #     fig, ax = plt.subplots(1, figsize=(22, 6), )
+    #     monthly_fine_dist = df.groupby('OFFENCE_MONTH').agg({'TOTAL_VALUE': 'count', }).reset_index()
+    #     plt.plot('OFFENCE_MONTH', 'TOTAL_VALUE', data=monthly_fine_dist, linewidth=10)
+    #     months = MonthLocator(range(1, 13), bymonthday=1, interval=3)
+    #     monthsFmt = DateFormatter("%b '%y")
+    #     ax.xaxis.set_major_locator(months)
+    #     ax.xaxis.setmajorformatter(monthsFmt)
+    #         = plt.xticks(rotation=45)
+    #         = plt.tickparams(axis='both', which='major', labelsize=10)
+    #         = plt.title('Monthly Number Cases', size=21)
 
     def PenaltyCases(self, event):
         search_startperiod = wx.TextEntryDialog(None, "Select First Period", "Title", "1/09/2018")
