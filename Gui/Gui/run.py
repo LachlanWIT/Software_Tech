@@ -42,7 +42,7 @@ class gui(wx.Frame):
         # creat button
         search = wx.Button(self.panel, -1, "Search Function", (10, 150), (140, -1))
         displayall = wx.Button(self.panel, -1, "All Data Function", (10, 180), (140, -1))
-        keyword = wx.Button(self.panel, -1, "penalty code search", (10, 210), (140, -1))
+        keyword = wx.Button(self.panel, -1, "Penalty code search", (10, 210), (140, -1))
         CamVsRadar = wx.Button(self.panel, -1, "CamVsRadar Function", (10, 240), (140, -1))
         insight = wx.Button(self.panel, -1, "Insight Function", (10, 270), (140, -1))
 
