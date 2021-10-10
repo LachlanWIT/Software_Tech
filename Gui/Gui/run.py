@@ -87,6 +87,7 @@ class gui(wx.Frame):
             if data['OFFENCE_MONTH'] >= self.begin and data["OFFENCE_MONTH"] <= self.stop:
                 print(row)
 
+#this function successfully gets camera and radar cases within an time range - couldnt integrate to gui ouput
     def comit(self, event):
         cb1 = self.cb1.GetValue()
         cb2 = self.cb2.GetValue()
