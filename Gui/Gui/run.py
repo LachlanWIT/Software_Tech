@@ -7,8 +7,6 @@ from matplotlib.dates import MonthLocator, DateFormatter
 import datetime
 from numpy.core.defchararray import lower
 
-
-
 data = pd.read_csv('penalty_data_set_2.csv', low_memory=False)
 
 
@@ -44,7 +42,7 @@ class gui(wx.Frame):
         # creat button
         search = wx.Button(self.panel, -1, "Search Function", (10, 150), (140, -1))
         displayall = wx.Button(self.panel, -1, "All Data Function", (10, 180), (140, -1))
-        keyword = wx.Button(self.panel, -1, "DCA code search", (10, 210), (140, -1))
+        keyword = wx.Button(self.panel, -1, "penality code search", (10, 210), (140, -1))
         CamVsRadar = wx.Button(self.panel, -1, "CamVsRadar Function", (10, 240), (140, -1))
         insight = wx.Button(self.panel, -1, "Insight Function", (10, 270), (140, -1))
 
@@ -74,7 +72,6 @@ class gui(wx.Frame):
         self.userInput = {}
         self.cb1 = wx.CheckBox(self.panel, label='Camera', pos=(430, 115))
         self.cb2 = wx.CheckBox(self.panel, label='Radar', pos=(530, 115))
-        self.cvmopt = []
 
         self.begin = None
         self.stop = None
@@ -142,11 +139,11 @@ class gui(wx.Frame):
     def PenaltyCases(self, event):
         search_startperiod = wx.TextEntryDialog(None, "Select First Period", "Title", "1/09/2018")
         if search_startperiod.ShowModal() == wx.ID_OK:
-            self.answerstartperiod = search_startperiod.GetValue()
-        self.userInput['startDate'] = self.answerstartperiod
+            self.userInput = self.userInput.GetValue()
+        self.userInput['penaltycode'] = self.userInput
 
     def CamVsRadar(self, event):
-        # this is due to intergration issues was unable to be run, the code appears under the commit function.
+        # this is due to integration issues was unable to be run, the code appears under the commit function.
         print()
 
     def insight(self, event):
