@@ -18,7 +18,7 @@ def function2_radar(start_date, end_date):
 
 
 def function2_mobile(start_date, end_date):
- mcamera = ((data[data.stack().str.contains("Mobile Digital Speed Camera").any(level=0)]))
+ mcamera = (data[data.stack().str.contains("Mobile Digital Speed Camera").any(level=0)])
  for row in mcamera:
     if mcamera["OFFENCE_MONTH"] >= start_date and mcamera["OFFENCE_MONTH"] <= end_date:
         print(row)
