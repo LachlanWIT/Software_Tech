@@ -42,7 +42,7 @@ class gui(wx.Frame):
         # creat button
         search = wx.Button(self.panel, -1, "Search Function", (10, 150), (140, -1))
         displayall = wx.Button(self.panel, -1, "All Data Function", (10, 180), (140, -1))
-        keyword = wx.Button(self.panel, -1, "penality code search", (10, 210), (140, -1))
+        keyword = wx.Button(self.panel, -1, "penalty code search", (10, 210), (140, -1))
         CamVsRadar = wx.Button(self.panel, -1, "CamVsRadar Function", (10, 240), (140, -1))
         insight = wx.Button(self.panel, -1, "Insight Function", (10, 270), (140, -1))
 
@@ -84,7 +84,7 @@ class gui(wx.Frame):
             if data['OFFENCE_MONTH'] >= self.begin and data["OFFENCE_MONTH"] <= self.stop:
                 print(row)
 
-#this function successfully gets camera and radar cases within an time range - couldnt integrate to gui ouput
+    # this function successfully gets camera and radar cases within an time range - couldnt integrate to gui ouput
     def comit(self, event):
         cb1 = self.cb1.GetValue()
         cb2 = self.cb2.GetValue()
@@ -137,7 +137,7 @@ class gui(wx.Frame):
     #         = plt.title('Monthly Number Cases', size=21)
 
     def PenaltyCases(self, event):
-        search_startperiod = wx.TextEntryDialog(None, "Select First Period", "Title", "1/09/2018")
+        penaltycode = wx.TextEntryDialog(None, "Select penalty code", "Title", "00000")
         if search_startperiod.ShowModal() == wx.ID_OK:
             self.userInput = self.userInput.GetValue()
         self.userInput['penaltycode'] = self.userInput
